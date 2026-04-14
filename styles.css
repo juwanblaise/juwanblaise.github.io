@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: whitesmoke;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: rgb(182, 103, 255);
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+nav {
+  background-color: rgb(57, 57, 57);
+  padding: 12px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav li:hover {
+  color: rgb(182, 103, 255);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  flex: 1;
+}
+
+.intro {
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card ul {
+  text-align: left;
+  padding-left: 20px;
+  flex-grow: 1;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(182, 103, 255);
+  color: white;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: rgb(140, 70, 220);
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+footer {
+  background-color: rgb(182, 103, 255);
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
